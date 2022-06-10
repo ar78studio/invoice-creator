@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="invoice.css" />
+    <title>Invoice Creator</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Invoice Generator</h1>
+        <p>Create a custom Invoice and email it to your clients!</p>
+      </header>
+      <section class="section">
+        <!-- <div class="buttons">
+          <button id="wash-car">Wash Car: $10</button>
+          <button id="mow-lawn">Mow Lawn: $20</button>
+          <button id="pull-weeds">Pull Weeds: $30</button>
+        </div> -->
+        <!-- <div class="cust-itm-descr">
+          <input
+            type="text"
+            id="invoice-input"
+            placeholder="Start Writing Invoice Items"
+          />
+          <button id="addto-invoice">Add New Item</button>
+        </div> -->
+
+        <div>
+          <form action="" id="form" class="cust-itm-descr">
+            <input
+              type="text"
+              name="client-name"
+              id="client-name"
+              placeholder="Enter Client's Name"
+            />
+            <input
+              type="text"
+              name="client-email"
+              id="client-email"
+              placeholder="Enter Client's Email"
+            />
+            <input
+              type="text"
+              id="invoice-descr"
+              name="descr"
+              placeholder="Item to Invoice"
+              value=""
+            />
+            <input
+              type="text"
+              id="invoice-nmbr"
+              name="cost"
+              maxlength="4"
+              placeholder="Cost"
+              value=""
+            />
+            <button type="submit" name="add-item" id="add-new-item">
+              Add New Item
+            </button>
+          </form>
+        </div>
+
+        <div class="section-items">
+          <div class="task-total">
+            <p>TASK</p>
+            <p>TOTAL</p>
+          </div>
+          <div class="invoice-items">
+            <!-- Start: Pass Custom Invoice Items Here -->
+
+            <div class="invoice-task-total">
+              <h3 id="inv-task" class="item">Mow Lawn</h3>
+              <a href="#" id="remove-last-entry">remove</a>
+              <h3 id="inv-total" class="item">$20</h3>
+            </div>
+
+            <!-- <div class="invoice-task-total">
+              <h3 id="inv-task" class="item">${renderItems[i].service}</h3>
+              <a href="" id="remove-last-entry">remove</a>
+              <h3 id="inv-total" class="item">$ ${renderItems[i].cost}</h3>
+            </div> -->
+
+            <!-- End: Pass Custom Invoice Items Here -->
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="notes-amount">
+          <p id="client-smry-heading">CLIENT SUMMARY</p>
+          <p id="total-amnt-heading">TOTAL AMOUNT</p>
+        </div>
+
+        <div class="summary">
+          <p id="client-sum-name">Client's Name</p>
+          <p id="client-sum-email">Client's Email</p>
+        </div>
+
+        <div class="notes-payment">
+          <p></p>
+          <p id="total-amount"></p>
+        </div>
+
+        <div id="payment-notes">
+          <p>We accept Crypto, Credit card, or PayPal</p>
+        </div>
+
+        <div class="send-button">
+          <button id="send-invoice">Send Invoice</button>
+        </div>
+
+        <div class="send-button">
+          <button id="clear-invoice">Clear Invoice</button>
+        </div>
+      </footer>
+    </div>
+    <script src="invoice.js"></script>
+  </body>
+</html>
