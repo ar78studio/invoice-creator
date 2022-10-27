@@ -134,6 +134,17 @@ input:focus {
     outline: 2px solid #ff7f50;
   }
 
+input:invalid {
+    outline: 2px dashed #ff7f50;
+}
+
+form:invalid button {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+
 .cust-itm-descr {
     display: flex;
     flex-direction: row;
@@ -181,6 +192,7 @@ input[type=number] {
 
 .container {
     max-width: 800px;
+    min-width: 350px;
     margin: auto;
     margin-top: 60px;
     background: #dadae7;
@@ -310,8 +322,9 @@ button:active {
 .invoice-task-total {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
+    align-items: center;
 }
 
 #inv-task {
@@ -395,7 +408,7 @@ button:active {
     color: brown;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     #remove-last-entry {
         position: inherit;
         width: 60px;
@@ -404,6 +417,28 @@ button:active {
         margin-left: 45%;
         margin-top: -13%;
         /* border: 1px solid black; */
+    }
+
+    .cust-itm-descr {
+        display: flex;
+        max-width: 270px;
+        flex-direction: row;
+        column-gap: auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    
+    }
+
+    .section-items {
+        max-width: 270px;
+        margin: 0 auto;
+        /* justify-content: space-between; */
+    }
+
+    #inv-task {
+        padding-bottom: 0.5rem;
     }
 
     #inv-total {
@@ -439,7 +474,7 @@ button:active {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-left: -38px;
+        margin-left: -40px;
         margin-right: 5%;
     }
 
@@ -482,8 +517,9 @@ button:active {
         display: flex;
         flex-direction: row;
         position:relative;
-        font-size: 5rem;
-        padding-top: 30%;
+        font-size: 3rem;
+        margin-top: 0.6rem;
+        /* padding-top: 10%; */
     }
 
     .notes-amount {

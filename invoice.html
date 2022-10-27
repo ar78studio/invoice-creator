@@ -30,16 +30,17 @@
         </div> -->
 
         <div>
-          <form action="" id="form" class="cust-itm-descr">
+          <form action="post" id="form" class="cust-itm-descr">
             <input
               type="text"
-              name="client-name"
+              name="clientname"
               id="client-name"
               placeholder="Enter Client's Name"
+              pattern="^[A-Z a-z]+"
             />
             <input
-              type="text"
-              name="client-email"
+              type="email"
+              name="clientemail"
               id="client-email"
               placeholder="Enter Client's Email"
             />
@@ -51,14 +52,14 @@
               value=""
             />
             <input
-              type="text"
+              type="number"
               id="invoice-nmbr"
               name="cost"
-              maxlength="4"
+              maxlength="6"
               placeholder="Cost"
               value=""
             />
-            <button type="submit" name="add-item" id="add-new-item">
+            <button type="button" name="add-item" id="add-new-item">
               Add New Item
             </button>
           </form>
@@ -72,11 +73,11 @@
           <div class="invoice-items">
             <!-- Start: Pass Custom Invoice Items Here -->
 
-            <div class="invoice-task-total">
+            <!-- <div class="invoice-task-total">
               <h3 id="inv-task" class="item">Mow Lawn</h3>
               <a href="#" id="remove-last-entry">remove</a>
               <h3 id="inv-total" class="item">$20</h3>
-            </div>
+            </div> -->
 
             <!-- <div class="invoice-task-total">
               <h3 id="inv-task" class="item">${renderItems[i].service}</h3>
@@ -95,8 +96,8 @@
         </div>
 
         <div class="summary">
-          <p id="client-sum-name">Client's Name</p>
-          <p id="client-sum-email">Client's Email</p>
+          <p id="client-sum-name"></p>
+          <p id="client-sum-email"></p>
         </div>
 
         <div class="notes-payment">
