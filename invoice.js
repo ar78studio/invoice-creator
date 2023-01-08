@@ -152,9 +152,13 @@ let nameOfClient = customInvoiceItm.reduce(function (email, { client }) {
   return email + client;
 }, "");
 
+console.log(nameOfClient);
+
 let emailOfClient = customInvoiceItm.reduce(function (client, { email }) {
   return client + email;
 }, "");
+
+console.log(emailOfClient);
 
 clientSumName.innerText = nameOfClient;
 clientSumEmail.innerText = emailOfClient;
@@ -175,6 +179,10 @@ clearInvoiceBtn.addEventListener("click", function () {
   totalAmount.innerText = "";
   clientSumName.innerHTML = "";
   clientSumEmail.innerHTML = "";
+  invoiceDescr.innerHTML = "";
+  invoiceNmbr.innerHTML = "";
+  clientName.innerHTML = "";
+  clientEmail.innerHTML = "";
   addCustomItem(customInvoiceItm);
   clientName.disabled = false;
   clientEmail.disabled = false;
