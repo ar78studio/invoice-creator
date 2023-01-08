@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="invoice.css" />
+    <!-- <link rel="stylesheet" href="/tailwind.css" /> -->
     <title>Invoice Generator</title>
   </head>
 
@@ -15,43 +16,36 @@
         <p>Create a custom Invoice and email it to your clients!</p>
       </header>
       <section class="section">
-        <!-- <div class="buttons">
-          <button id="wash-car">Wash Car: $10</button>
-          <button id="mow-lawn">Mow Lawn: $20</button>
-          <button id="pull-weeds">Pull Weeds: $30</button>
-        </div> -->
-        <!-- <div class="cust-itm-descr">
-          <input
-            type="text"
-            id="invoice-input"
-            placeholder="Start Writing Invoice Items"
-          />
-          <button id="addto-invoice">Add New Item</button>
-        </div> -->
-
         <div>
           <form action="post" id="form" class="cust-itm-descr">
+            <label for="client-name"> Full Name
             <input
-              type="text"
-              name="clientname"
+            type="text"
+            name="clientname"
               id="client-name"
               placeholder="Enter Client's Name"
               pattern="^[A-Z a-z]+"
             />
+          </label>
+          <label for="client-email"> Recipient's Email
             <input
               type="email"
               name="clientemail"
               id="client-email"
               placeholder="Enter Client's Email"
             />
+          </label>
+          <label for="invoice-descr"> Items to Invoice
             <input
-              type="text"
-              id="invoice-descr"
-              name="descr"
-              placeholder="Item to Invoice"
-              value=""
-            />
-            <input
+            type="text"
+            id="invoice-descr"
+            name="descr"
+            placeholder="Item to Invoice"
+            value=""
+          />
+          </label>
+            <label for="invoice-nmbr"> Item Cost
+              <input
               type="number"
               id="invoice-nmbr"
               name="cost"
@@ -59,6 +53,8 @@
               placeholder="Cost"
               value=""
             />
+            </label>
+            
             <button type="button" name="add-item" id="add-new-item">
               Add New Item
             </button>
@@ -75,7 +71,7 @@
 
             <!-- <div class="invoice-task-total">
               <h3 id="inv-task" class="item">Mow Lawn</h3>
-              <a href="#" id="remove-last-entry">remove</a>
+              <a href="#" id="remove-invoice-item">remove</a>
               <h3 id="inv-total" class="item">$20</h3>
             </div> -->
 
